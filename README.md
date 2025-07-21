@@ -48,5 +48,5 @@ weather-app/
 
 💬 Contact
 Vijay Vardhan
-📧 vijayvardhan1355@gmail.com
-🔗 https://github.com/Vijay-vardhan1355
+- 📧 vijayvardhan1355@gmail.com
+- 🔗 https://github.com/Vijay-vardhan1355
