@@ -5,6 +5,10 @@ It also supports getting weather based on your **current location**.
 
 ---
 
+## Live Demo 🚀  
+[Click Here to View the Live Weather App](https://weather-app-km08.onrender.com/)
+
+
 ## 🚀 Features  
 
 - ✅ Search weather by city name  
