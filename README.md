@@ -9,8 +9,7 @@ It also supports getting weather based on your **current location**.
 
 - ✅ Search weather by city name  
 - ✅ Auto-detect weather by user’s location  
-- ✅ 5-Day Forecast  
-- ✅ Dynamic Day/Night background theme  
+- ✅ 5-Day Forecast    
 - ✅ Interactive Map with marker using **Leaflet.js**  
 - ✅ Clean, responsive design  
 
@@ -26,5 +25,28 @@ It also supports getting weather based on your **current location**.
 
 ---
 
-## 📂 Project Structure  
+## Project Folder Structure
 
+```
+weather-app/
+├── public/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── script.js
+├── views/
+│   └── index.ejs
+├── server.js
+├── package.json
+├── .gitignore
+├── README.md
+```
+📌 Note
+- This project is for learning and portfolio purposes.
+
+- You may customize the design or functionality as per your need.
+
+💬 Contact
+Vijay Vardhan
+📧 vijayvardhan1355@gmail.com
+🔗 https://github.com/Vijay-vardhan1355
