@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.day {
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
+}
+
+.night {
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 150px;
+}

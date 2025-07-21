@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App with Map</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <h1>Weather App</h1>
+
+    <form method="get" action="/">
+        <input type="text" name="city" placeholder="Enter city">
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <button id="locateBtn">Use My Location</button>
+
+    <% if (weather) { %>
+        <div class="weather-card <%= weather.icon.includes('d') ? 'day' : 'night' %>">
+            <h2><%= weather.city %>, <%= weather.country %></h2>
+            <img src="https://openweathermap.org/img/wn/<%= weather.icon %>@2x.png" alt="Icon">
+            <p><%= weather.description %></p>
+            <p>Temp: <%= weather.temp %>°C</p>
+            <p>Humidity: <%= weather.humidity %>%</p>
+            <p>Wind: <%= weather.wind %> m/s</p>
+        </div>
+
+        <div id="map" style="height: 300px; margin-top: 20px;"></div>
+
+        <script>
+            const map = L.map('map').setView([<%= weather.lat %>, <%= weather.lon %>], 10);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+            L.marker([<%= weather.lat %>, <%= weather.lon %>]).addTo(map)
+                .bindPopup("<%= weather.city %>").openPopup();
+        </script>
+
+        <h3>5-Day Forecast</h3>
+        <div class="forecast-container">
+            <% forecast.forEach(day => { %>
+                <div class="forecast-card">
+                    <p><%= day.date %></p>
+                    <img src="https://openweathermap.org/img/wn/<%= day.icon %>@2x.png" alt="Icon">
+                    <p><%= day.description %></p>
+                    <p>Temp: <%= day.temp %>°C</p>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
